@@ -29,6 +29,15 @@ local RoundFloat = function(number, num)
     return math.floor(number*math.pow(10,num)+0.5) / math.pow(10,num)
 end
 
+local function Animation(dict, anim, ped)
+    RequestAnimDict(dict)
+    while not HasAnimDictLoaded(dict) do
+        Wait(0)
+    end
+    
+    TaskPlayAnim(ped, dict, anim, 8.0, 1.0, -1, 1, 0, 0, 0, 0)
+end
+
 local function sit(object, modelName, data)
 	disableControls = true
 	currentObj = object
@@ -52,14 +61,24 @@ local function sit(object, modelName, data)
 
 			TriggerServerEvent('qb-sna-sit:takePlace', objectCoords)
 
-			currentScenario = data.scenario
-			TaskStartScenarioAtPosition(playerPed, currentScenario, offset.x, offset.y, offset.z, (objHead + 180.0) + data.rotationOffset, 0, true, false)
-			
-			Wait(2500)
-			if GetEntitySpeed(PlayerPedId()) > 0 then
-				ClearPedTasks(PlayerPedId())
-				TaskStartScenarioAtPosition(playerPed, currentScenario, offset.x, offset.y, offset.z, (objHead + 180.0) + data.rotationOffset, 0, true, false)
-			end
+            if data.scenario.dict then
+                currentScenario = data.scenario
+                SetEntityCoords(playerPed, offset.x, offset.y, offset.z)
+                SetEntityHeading(playerPed, (objHead + 180.0) + data.rotationOffset)
+                local dict = data.scenario.dict
+                local anim = data.scenario.anim
+                
+                Animation(dict, anim, playerPed)
+            else
+                currentScenario = data.scenario
+                TaskStartScenarioAtPosition(playerPed, currentScenario, offset.x, offset.y, offset.z, (objHead + 180.0) + data.rotationOffset, 0, true, false)
+                
+                Wait(2500)
+                if GetEntitySpeed(PlayerPedId()) > 0 then
+                    ClearPedTasks(PlayerPedId())
+                    TaskStartScenarioAtPosition(playerPed, currentScenario, offset.x, offset.y, offset.z, (objHead + 180.0) + data.rotationOffset, 0, true, true)
+                end    
+            end
 
 			sitting = true
 			exports['qb-core']:DrawText(Config.Text["StandUp"], Config.DrawTextLocation)
@@ -73,10 +92,17 @@ CreateThread(function()
 		if sitting then 
 			sleep = 200
 			local playerPed = PlayerPedId()
-			if not IsPedUsingScenario(playerPed, currentScenario) then
-				exports['qb-core']:HideText()
-				WakeUp()
-			end
+            if currentScenario.dict then
+                if not IsEntityPlayingAnim(playerPed, currentScenario.dict, currentScenario.anim, 3) then
+                    exports['qb-core']:HideText()
+                    WakeUp()                    
+                end
+            else
+                if not IsPedUsingScenario(playerPed, currentScenario) then
+                    exports['qb-core']:HideText()
+                    WakeUp()
+                end    
+            end
 		end
 		Wait(sleep)
 	end

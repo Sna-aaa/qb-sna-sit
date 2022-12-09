@@ -73,7 +73,7 @@ Config.Sitable = {
 	prop_rock_chair_01 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
 	prop_skid_chair_01 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
 	prop_skid_chair_02 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
-	prop_skid_chair_03 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
+	prop_skid_chair_03 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.1, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
 	prop_sol_chair 				= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
 	prop_wheelchair_01 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
 	prop_wheelchair_01_s 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
@@ -103,10 +103,9 @@ Config.Sitable = {
 	prop_table_03_chr 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
 	prop_torture_ch_01 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
 	v_ilev_fh_dineeamesa 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
-
-
 	v_ilev_fh_kitchenstool 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
 	v_ilev_tort_stool 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
+	v_res_m_armchair			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = -0.2, sideOffset = 0.0, rotationOffset = 0.0},
 
 	-- SEAT
 	hei_prop_yah_seat_01 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
@@ -129,23 +128,31 @@ Config.Sitable = {
 	p_res_sofa_l_s 				= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
 	p_v_med_p_sofa_s 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
 	p_yacht_sofa_01_s 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
-	v_ilev_m_sofa 				= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
+	v_ilev_m_sofa 				= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.4, sideOffset = 0.0, rotationOffset = 0.0},
 	v_res_tre_sofa_s 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
 	v_tre_sofa_mess_a_s 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
 	v_tre_sofa_mess_b_s 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
 	v_tre_sofa_mess_c_s 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
+	v_res_m_h_sofa	 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = -0.2, sideOffset = 0.0, rotationOffset = 0.0},
 
 	-- MISC
 	prop_roller_car_01 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
 	prop_roller_car_02 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
+    prop_patio_lounger1         = { scenario = 'PROP_HUMAN_SEAT_SUNLOUNGER', verticalOffset = 0.35, forwardOffset = -0.25, sideOffset = 0.0, rotationOffset = 0.0},
 
 	-- CUSTOM
 	v_ret_gc_chair02			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
 	v_serv_ct_chair02			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
+    v_med_cor_medstool 			= { scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
 
-	--Cayo
+	--Hashed
     cayo_chair_01 				= { hash = 688581443, scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.0, forwardOffset = -0.1, sideOffset = 0.0, rotationOffset = 0.0},
     cayo_chair_02 				= { hash = -1460572644, scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.0, forwardOffset = -0.1, sideOffset = 0.0, rotationOffset = 0.0},
-    prop_patio_lounger1         = { scenario = 'PROP_HUMAN_SEAT_SUNLOUNGER', verticalOffset = 0.35, forwardOffset = -0.25, sideOffset = 0.0, rotationOffset = 0.0}
+    cayo_barstool 				= { hash = 708083002, scenario = 'PROP_HUMAN_SEAT_STRIP_WATCH', verticalOffset = 0.8, forwardOffset = 0.1, sideOffset = 0.0, rotationOffset = 0.0},
+	michael_chair_01			= { hash = 2051175944, scenario = 'PROP_HUMAN_SEAT_BENCH', verticalOffset = 0.5, forwardOffset = -0.1, sideOffset = 0.0, rotationOffset = 0.0},
 
+	--Beds
+	v_med_emptybed				= { scenario = {dict='anim@gangops@morgue@table@', anim='ko_front'}, verticalOffset = 0.0, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},        --'WORLD_HUMAN_SUNBATHE'
+	v_med_bed1					= { scenario = {dict='anim@gangops@morgue@table@', anim='ko_front'}, verticalOffset = 1.5, forwardOffset = 0.0, sideOffset = 0.0, rotationOffset = 0.0},
+    surgery_bed_01 				= { hash = -1519439119, scenario = {dict='anim@gangops@morgue@table@', anim='ko_front'}, verticalOffset = 0.0, forwardOffset = -0.1, sideOffset = 0.0, rotationOffset = 0.0},
 }
